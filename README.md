@@ -9,7 +9,7 @@ Building the plugin
 ----
 The plugin is built from the `src` directory.
 
-Mac 32 & 64 bit fat binary:
+Mac x86_64 and arm64 fat binary:
 
     make -f Makefile.mac
 

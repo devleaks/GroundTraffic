@@ -2,7 +2,7 @@
 
 include ../version.mak
 
-XPSDK=../../XPSDK302
+XPSDK=../../XPSDK401
 
 CC=cc
 #BUILD=-g -DDEBUG
@@ -11,7 +11,7 @@ BUILD=-O3 -DNDEBUG
 LDFLAGS=-bundle -Wl,-x
 DEFINES=-DAPL=1 -DIBM=0 -DLIN=0 -DVERSION=$(VERSION)
 INC=-F$(XPSDK)/Libraries/Mac -I$(XPSDK)/CHeaders/XPLM
-CFLAGS=-arch i386 -arch x86_64 -march=core2 -ffast-math -pipe -Wall -Winline -Wno-missing-braces -fvisibility=hidden -mmacosx-version-min=10.6 $(BUILD) $(DEFINES) $(INC)
+CFLAGS=-arch arm64 -arch x86_64 -ffast-math -pipe -Wall -Winline -Wno-missing-braces -fvisibility=hidden -mmacosx-version-min=10.6 $(BUILD) $(DEFINES) $(INC)
 
 VPATH=
 SRC=groundtraffic.c draw.c routes.c planes.c drawdebug.c
